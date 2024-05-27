@@ -1,6 +1,9 @@
 import java.awt.*;
 import java.awt.event.InputEvent;
-import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
+
+
+import javax.imageio.ImageIO;
 public class ApplicationRobot{
 
     public static void main(String[]args) throws Exception{
@@ -18,7 +21,7 @@ public class ApplicationRobot{
         
         emma.mouseMove(1830,550);
         emma.setAutoDelay(1000);
-        emma.mouseMove(1850,550);
+        emma.mouseMove(1860,550);
         emma.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         emma.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         
@@ -33,7 +36,10 @@ public class ApplicationRobot{
         emma.mouseMove(1050,170);
         emma.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         emma.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
- 
-        emma.keyPress(KeyEvent.VK_SHIFT + KeyEvent.VK_WINDOWS + KeyEvent.VK_S);
+
+        Rectangle screenRect = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
+        BufferedImage image = emma.createScreenCapture(Rectangle.screenRect)
+        File file = new File("screenshot.png");
+
     }
 }
