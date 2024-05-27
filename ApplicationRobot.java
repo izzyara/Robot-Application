@@ -1,9 +1,9 @@
 import java.awt.*;
 import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
 public class ApplicationRobot{
 
     public static void main(String[]args) throws Exception{
-    
         Robot emma = new Robot();
         emma.setAutoDelay(200);
 
@@ -11,29 +11,29 @@ public class ApplicationRobot{
         emma.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         emma.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
-        emma.mouseMove(100,820);
+        emma.mouseMove(100,960);
         emma.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         emma.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
         
-        emma.mouseMove(1310,500);
+        emma.mouseMove(1830,550);
         emma.setAutoDelay(1000);
-        emma.mouseMove(1320,500);
+        emma.mouseMove(1850,550);
+        emma.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        emma.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        
+        emma.mouseMove(1870,1010);
         emma.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         emma.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
-        emma.mouseMove(1320,800);
+        emma.mouseMove(1050,60);
         emma.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         emma.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
-        emma.mouseMove(820,150);
+        emma.mouseMove(1050,170);
         emma.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         emma.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-
-        emma.mouseMove(820,265);
-        emma.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-        emma.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-
-
+ 
+        emma.keyPress(KeyEvent.VK_SHIFT + KeyEvent.VK_WINDOWS + KeyEvent.VK_S);
     }
 }
