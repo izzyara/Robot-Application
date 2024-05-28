@@ -14,7 +14,7 @@ public class ApplicationRobot{
         emma.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         emma.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
-        emma.mouseMove(100,960);
+        emma.mouseMove(100,930);
         emma.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         emma.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
@@ -37,9 +37,10 @@ public class ApplicationRobot{
         emma.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         emma.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
-        Rectangle screenRect = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
+        /*Rectangle screenRect = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
         BufferedImage image = emma.createScreenCapture(Rectangle.screenRect)
         File file = new File("screenshot.png");
+        */
 
     }
 }
