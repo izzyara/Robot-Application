@@ -1,9 +1,10 @@
 import java.awt.*;
 import java.awt.event.InputEvent;
 import java.awt.image.BufferedImage;
-
-
 import javax.imageio.ImageIO;
+import java.io.File; 
+
+
 public class ApplicationRobot{
 
     public static void main(String[]args) throws Exception{
@@ -14,14 +15,13 @@ public class ApplicationRobot{
         emma.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         emma.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
-        emma.mouseMove(100,930);
+        emma.mouseMove(100,905);
         emma.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         emma.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
-        
-        emma.mouseMove(1830,550);
         emma.setAutoDelay(1000);
-        emma.mouseMove(1860,550);
+        emma.mouseMove(1830,540);
+        emma.mouseMove(1860,540);
         emma.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         emma.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         
@@ -37,10 +37,13 @@ public class ApplicationRobot{
         emma.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         emma.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 
-        /*Rectangle screenRect = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
-        BufferedImage image = emma.createScreenCapture(Rectangle.screenRect)
-        File file = new File("screenshot.png");
-        */
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        Rectangle bounds = new Rectangle(screenSize);
+        BufferedImage image= emma.createScreenCapture(bounds); 
+        File file = new File("myScreenShot.png");
+        ImageIO.write(image,"png", file);
+        System.out.println("A screenshot is captured to " + file.getPath()); 
+
 
     }
 }
